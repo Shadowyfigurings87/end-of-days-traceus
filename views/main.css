@@ -1,0 +1,29 @@
+html {
+    font-size: 22px;
+}
+
+body {
+    background-color: indigo;
+    color: rgb(52, 165, 42);
+}
+
+a {
+      color: maroon;
+}
+
+a:visited {
+      color:black
+}
+
+a:hover, a:active {
+      color:chocolate
+}
+
+table, tr, th, td, caption {
+    border: 1px solid #eee;
+    font-family: 'Courier New', Courier, monospace;
+    border-collapse: collapse;
+    padding: 0.5rem;
+}
+
+

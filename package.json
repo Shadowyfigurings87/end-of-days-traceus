@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "@kubernetes/client-node": "^0.20.0",
+    "@tensorflow/tfjs": "^4.17.0",
+    "axios": "^1.6.8",
+    "date-fns": "^3.6.0",
+    "docker": "^1.0.0",
+    "eslint": "^9.0.0",
+    "express": "^4.19.2",
+    "kubectl": "^0.0.0",
+    "mongoose": "^8.3.1",
+    "parcel": "^2.12.0",
+    "py": "^0.0.0",
+    "reach": "^1.0.1",
+    "uuid": "^9.0.1",
+    "v18": "^1.0.2",
+    "validator": "^13.11.0",
+    "webpack": "^5.91.0"
+  },
+  "name": "npm",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "Zacharaih",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

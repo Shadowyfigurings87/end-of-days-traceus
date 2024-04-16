@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+    <html lang="en">  
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Zachariah" content="AI">
+        <meta name="viewport" content="This page represents the Brain of this organization.">
+        <title>Prometheus.</title>
+        <link rel="stylesheet" href="main.css"
+        type="text/css">
+    
+        <style>
+            /* Add your CSS styling for the chat bar here */
+            #chat-bar {
+              position: fixed;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              background-color: #f1f1f1;
+            }
+            #chat-input {
+              width: 90%;
+              padding: 10px;
+              border: none;
+              margin: 10px;
+            }
+            #send-btn {
+              width: 8%;
+              padding: 10px;
+              background-color: #4CAF50;
+              color: white;
+              border: none;
+              cursor: pointer;
+            }
+          </style>  
+    </head>
+
+    <body>
+        <h1>Hi, i am Zachariah</h1>
+
+        <hr>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, nobis sunt. Ducimus voluptate inventore nesciunt sint consequatur ipsum sit accusamus minus modi laborum, obcaecati earum, reiciendis, aliquam ad amet laudantium.
+         </p>
+
+        <hr>
+
+        <ul>
+            <li>Download an <a href="html5.png"download>html5 favicon</a></li>
+            <li>
+                contact me at <a href="zachariah2saga@icloud.com">my email address</a>
+            </li>
+            <li>
+                Dial <a href="tel:+9045541983">my phone number</a>
+            </li>
+            <li>
+                Open <a href="https://www.google.com/"target="_blank">google</a> in a new tab
+            </li>
+        </ul>
+        
+        <hr>
+        <div id="chat-bar">
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <button id="send-btn">Send</button>
+          </div>
+          
+          <script>
+            document.getElementById('send-btn').addEventListener('click', function() {
+              const userInput = document.getElementById('chat-input').value;
+          
+              fetch('/process-message', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: userInput })
+              })
+              .then(response => response.json())
+              .then(data => {
+                console.log('Server response:', data);
+                // Handle the server response here
+              })
+              .catch(error => console.error('Error:', error));
+          
+              // Clear the input field
+              document.getElementById('chat-input').value = '';
+            });
+          </script>
+          
+        <hr>
+
+        &lt;&lt;&lt; &copy; <a href="about.html">Zachariah Riddle</a> &lt;&lt;&lt;
+        <p>
+            <a href="/">back to home</a>
+        </p>
+    </body>
+
+    </html> 

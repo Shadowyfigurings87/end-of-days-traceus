@@ -1,0 +1,97 @@
+// Quantum.BellState.qs
+// This Q# file contains an operation to create a Bell State.
+// The Bell State is a fundamental concept in quantum computing and demonstrates entanglement.
+// For more information, refer to the Azure Quantum documentation and the awesome-qsharp GitHub repository.
+
+namespace Quantum.BellState {
+    open Microsoft.Quantum.Intrinsic;
+    open Microsoft.Quantum.Canon;
+
+    // ... (Your Q# code here)
+
+}
+
+// End of Quantum.BellState.qs
+
+namespace Quantum.BellState {
+    open Microsoft.Quantum.Intrinsic;
+    open Microsoft.Quantum.Canon;
+
+    operation Set (desired: Result, q1: Qubit) : Unit {
+        if (desired != M(q1)) {
+            X(q1);
+        }
+    }
+
+    operation BellState (q1: Qubit, q2: Qubit) : (Result, Result) {
+        H(q1);
+        CNOT(q1, q2);
+        let res1 = M(q1);
+        let res2 = M(q2);
+        return (res1, res2);
+    }
+}
+namespace Quantum.BellState {
+    open Microsoft.Quantum.Intrinsic;
+    open Microsoft.Quantum.Canon;
+
+    operation Set (desired: Result, q1: Qubit) : Unit {
+        if (desired != M(q1)) {
+            X(q1);
+        }
+    }
+
+    operation BellState (q1: Qubit, q2: Qubit) : (Result, Result) {
+        H(q1);
+        CNOT(q1, q2);
+        let res1 = M(q1);
+        let res2 = M(q2);
+        return (res1, res2);
+    }
+ // Quantum.Teleportation.qs
+// This Q# file demonstrates the quantum teleportation operation.
+// Quantum teleportation is a process by which the state of a qubit can be transmitted from one location to another.
+// For more examples and resources, visit the Azure Quantum tutorial and the awesome-qsharp GitHub repository.
+
+namespace Quantum.Teleportation {
+    open Microsoft.Quantum.Intrinsic;
+    open Microsoft.Quantum.Canon;
+
+    // ... (Your Q# code here)
+
+}
+
+// End of Quantum.Teleportation.qs
+   
+}
+namespace Quantum.Teleportation {
+    open Microsoft.Quantum.Intrinsic;
+    open Microsoft.Quantum.Canon;
+
+    operation Teleport (msgQubit: Qubit, hereQubit: Qubit, thereQubit: Qubit) : Unit {
+        H(hereQubit);
+        CNOT(hereQubit, thereQubit);
+        CNOT(msgQubit, hereQubit);
+        H(msgQubit);
+        let m1 = M(msgQubit);
+        let m2 = M(hereQubit);
+        if (m1 == One) {
+            Z(thereQubit);
+        }
+        if (m2 == One) {
+            X(thereQubit);
+        }
+    }
+}
+namespace Quantum.Entanglement {
+    open Microsoft.Quantum.Intrinsic;
+    open Microsoft.Quantum.Canon;
+
+    operation CreateEPRPair(q1: Qubit, q2: Qubit) : (Result, Result) {
+        H(q1); // Put the first qubit in superposition
+        CNOT(q1, q2); // Entangle the qubits
+        let res1 = M(q1); // Measure the first qubit
+        let res2 = M(q2); // Measure the second qubit
+        return (res1, res2); // Return the measurement results
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "azureAutomation.directory.basePath": "c:\\Users\\Owner",
+    "checkov.checkovVersion": "",
+    "editor.wordWrap": "on",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.experimental.asyncTokenizationVerification": true,
+    "editor.experimental.asyncTokenizationLogging": true,
+    "editor.experimentalInlineEdit.backgroundColoring": true,
+    "editor.experimentalInlineEdit.enabled": true,
+    "npm.enableRunFromFolder": true,
+    "openshiftToolkit.searchForToolsInPath": true,
+    "openshiftToolkit.showChannelOnOutput": true,
+    "npm-intellisense.scanDevDependencies": true,
+    "npm-intellisense.showBuildInLibs": true,
+    "DockerRun.DisableDockerrc": true,
+    "julia.executablePath": "C:\\NPM\\main.yml"
+}
