@@ -5,6 +5,7 @@
         "abrahamwilliam007.es7-javascript-class-snippets",
         "microsoft-isvexptools.powerplatform-vscode",
         "ritwickdey.liveserver",
-        "mongodb.mongodb-vscode"
+        "mongodb.mongodb-vscode",
+        "ms-vscode.makefile-tools"
     ]
 }
